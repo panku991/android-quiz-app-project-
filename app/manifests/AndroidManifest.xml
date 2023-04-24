@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,53 +9,40 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuizUp"
+        android:theme="@style/Theme.Testapp"
         tools:targetApi="31">
         <activity
-            android:name=".result.Result"
+            android:name=".profile"
             android:exported="false" />
         <activity
-            android:name=".prepare.GetTest"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data
-                    android:host="quizup.page.link"
-                    android:scheme="https"/>
-                <data
-                    android:host="quizup.page.link"
-                    android:scheme="http"/>
-            </intent-filter>
-
-        </activity>
-        <activity
-            android:name=".prepare.SetTest"
+            android:name=".sign_in"
             android:exported="false" />
         <activity
-            android:name=".profile.UserProfile"
+            android:name=".loginbye"
             android:exported="false" />
         <activity
-            android:name=".register.UserSignUp"
+            android:name=".TestResult"
             android:exported="false" />
         <activity
-            android:name=".login.UserSignIn"
+            android:name=".setQuestions"
             android:exported="false" />
         <activity
-            android:name=".tests.GivenTests"
+            android:name=".getTest"
             android:exported="false" />
         <activity
-            android:name=".tests.CreatedTests"
+            android:name=".test_title"
             android:exported="false" />
         <activity
-            android:name=".welcome.Welcome"
+            android:name=".give_test_ID"
+            android:exported="false" />
+        <activity
+            android:name=".login_activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".welcome.SplashScreen"
+            android:name=".splash_screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
