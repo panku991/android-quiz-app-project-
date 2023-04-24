@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/thisgo"
+    android:background="#3fb2a0">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/menu"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/profileBtn"
+            android:layout_toEndOf="@id/menuBtn"
+            android:text="@string/app_name"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/person_pin" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/img_center"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/img"
+        android:layout_below="@id/toolbar"
+        >
+
+        <TextView
+            android:id="@+id/user_wel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello ! "
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            android:textSize="26sp"
+            />
+
+        <TextView
+            android:layout_below="@id/user_wel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's improve our knowledge together ...."
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+
+            android:fontFamily="sans-serif"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/timeTV"
+            android:src="@drawable/ic_time"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"/>
+
+        <TextClock
+            android:id="@+id/timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="01:11"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#0C5046"
+        android:src="@drawable/ic_baseline_add_24"
+        android:pointerIcon="arrow"
+        app:layout_anchor="@id/recycler_view" />
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_test"
+        android:text="Create Test"
+        android:backgroundTint="#0C5046"
+        android:layout_above="@id/give_test"
+        app:layout_anchor="@id/recycler_view"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible"
+        android:textColor="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/give_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/float_Btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0C5046"
+        android:text="Give Test"
+        android:textColor="@color/white"
+        app:layout_anchor="@id/recycler_view"
+        android:visibility="invisible"/>
+
+
+
+
+
+
+</RelativeLayout>
